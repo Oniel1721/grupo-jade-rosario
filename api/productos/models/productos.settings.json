@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "productos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "productos.productos"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Marca": {
+      "type": "enumeration",
+      "enum": [
+        "Fenel",
+        "Lujan",
+        "Victorious"
+      ]
+    },
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Pelo",
+        "Piel"
+      ]
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
