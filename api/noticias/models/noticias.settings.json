@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "noticias",
+  "info": {
+    "name": "Noticias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "maxLength": 21
+    },
+    "Multimedia": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Contenido": {
+      "type": "text"
+    }
+  }
+}
